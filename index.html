@@ -6,30 +6,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title></title>
 
-<!-- Google fonts -->
+<!--
+
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:600' rel='stylesheet' type='text/css'>
 
-<!-- font awesome -->
+<!-- font awesome 
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
-<!-- bootstrap -->
+<!-- bootstrap 
 <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
 
-<!-- animate.css -->
+<!-- animate.css 
 <link rel="stylesheet" href="assets/animate/animate.css" />
 <link rel="stylesheet" href="assets/animate/set.css" />
 
-<!-- gallery -->
-<link rel="stylesheet" href="assets/gallery/blueimp-gallery.min.css">
-
-<!-- favicon -->
+<!-- favicon 
 <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon">
 <link rel="icon" href="images/favicon.jpg" type="image/x-icon">
 
-<!--Jquery -->
+<!--Jquery 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+<!-- gallery -->
+<link rel="stylesheet" href="assets/css/blueimp-gallery.min.css">
+    
 <!--Custom CSS-->
 <link rel="stylesheet" href="assets/main.css">
 
@@ -37,10 +38,85 @@
 
 <body>
 
-<>
+    <div class="container">
+        <div id="blueimp-gallery-carousel" class="blueimp-gallery blueimp-gallery-carousel">
+            <div class="slides"></div>
+            <h3 class="title"></h3>
+            <a class="prev">‹</a>
+            <a class="next">›</a>
+            <a class="play-pause"></a>
+            <ol class="indicator"></ol>
+            
+            <div class="intro-wrapper">
+                <p class="intro-title"></p>
+                <p class="intro-text"></p>
+            </div>
+        </div>
+        
+        <div class="bottom-nav-wrapper">
+            <img class ="bottom-nav-child-fixed" src="assets/image/ufred_logo.svg" alt="UFred Logo">
+            <p class ="bottom-nav-child-flex">Module 1: Title goes here...</p>
+            <img class ="bottom-nav-child-fixed" src="assets/image/menu_icon.svg" alt="Nav Icon">
+            <img class ="bottom-nav-child-fixed" src="assets/image/links_icon.svg" alt="Nav Link">
+            <img class ="bottom-nav-child-fixed" src="assets/image/help_icon.svg" alt="Nav Help">
+        </div>
+
+    </div>
     
 
+    
+    <div id="links" style="display: none">
+        <a href="assets/image/bg.jpg" data-intro-title="Title goes here..." data-intro-text="Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.<br>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.<br>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.">
+            <img src="assets/image/bg.jpg" alt="Background Image 1" >
+        </a>
+        <a href="assets/image/bg.jpg" 
+           data-intro-title="Title 2 goes here..." 
+           data-intro-text="Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.<br>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.<br>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.">>
+            <img src="assets/image/bg.jpg" alt="Background Image 2">
+        </a>
+        <a href="assets/image/bg.jpg" 
+           data-intro-title="Title 3 goes here..." 
+           data-intro-text="Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.<br>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.<br>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.">>
+            <img src="assets/image/bg.jpg" alt="Background Image 3">
+        </a>
+
+    </div>
 <!--Custom JS-->
 <script src="assets/main.js"></script>
+
+<!--Gallery-->
+<script src="assets/js/blueimp-gallery.min.js"></script>
+    
+<script>
+blueimp.Gallery(
+    document.getElementById('links').getElementsByTagName('a'),
+    {
+        container: '#blueimp-gallery-carousel',
+        carousel: true,
+        onslide: function (index, slide) {
+            
+            // I absolutely should use forEach here if I have more than, say, three elements. Copy & paste here is not the best practice but it saves time
+            var title = this.list[index].getAttribute("data-intro-title"),
+                node = this.container.find('.intro-title'),
+                text = this.list[index].getAttribute("data-intro-text"),
+                nodeTwo = this.container.find('.intro-text');
+            
+            node.empty();
+            nodeTwo.empty();
+                          
+            if (title) {
+                node[0].appendChild(document.createTextNode(title));
+            }
+            if (text) {
+                nodeTwo[0].appendChild(document.createTextNode(text));
+            }
+            
+            
+        }
+    }
+);
+
+</script>    
+    
 </body>
 </html>
