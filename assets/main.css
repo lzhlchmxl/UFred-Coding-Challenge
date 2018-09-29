@@ -1,24 +1,72 @@
+html,
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+
+/* Gallery*/
+.blueimp-gallery-carousel {
+  margin: 0;
+  padding-bottom: 100vh;
+}
+
+
 .container {
   position: relative;
 }
-.bottom-nav-wrapper {
-  display: flex;
-  position: absolute;
-  background-color: #eaeaea;
-  height: 40px;
-  bottom: 0;
+
+.blueimp-gallery>.slides {
+}
+
+.blueimp-gallery>.slides>.slide>.slide-content {
+/*  margin:0;    */
   width: 100%;
 }
 
+.arrow-right {
+  width: 0; 
+  height: 0; 
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-left: 15px solid rgb(100,100,100);
+}
+
+.arrow-left {
+  width: 0; 
+  height: 0; 
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent; 
+  border-right:15px solid rgb(100,100,100); 
+}
+
+.arrow-left:hover {
+  border-right-color: rgb(255,206,76);      
+}
+
+.arrow-right:hover {
+  border-left-color: rgb(255,206,76);        
+}
+
+.blueimp-gallery> .next,
+.blueimp-gallery> .prev {
+  display: block;
+  border: none;
+  background: none;
+    
+}
+
+/* Introduction */
 .blueimp-gallery > .intro-wrapper {
   position: absolute;
   width: 500px;
-  height: 500px;
-  top: 30px;
-  left: 15px;
+  height: auto;
+  top: 10%;
+  left: 5%;
   color: #fff;
   display: none;
-  background-color: aquamarine;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .blueimp-gallery-carousel > .intro-wrapper {
   display: block;
@@ -27,6 +75,9 @@
 .blueimp-gallery > .intro-wrapper > .intro-title {
   color: #fff;
   display: none;
+  font-weight: bold;
+  padding: 0 0 20px 20px;
+  border-bottom: 2px solid rgb(156,31,32);
 }
 .blueimp-gallery-carousel > .intro-wrapper > .intro-title {
   display: block;
@@ -35,33 +86,65 @@
 .blueimp-gallery > .intro-wrapper > .intro-text {
   color: #fff;
   display: none;
+  padding: 0 20px;
+  font-size: 0.9em;
 }
 .blueimp-gallery-carousel > .intro-wrapper > .intro-text {
   display: block;
 }
 
-
-
-
-.nav {
-  z-index: 10;
+/* Bottom Navigation Bar*/
+.bottom-nav-wrapper {
+  position: absolute;
+  height: 50px;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0;
+  padding: 0;
 }
 
-
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+.bottom-nav-child-fixed {
+  display: inline-block;
+  height:80%;
+  margin: 5px 5%;
+    
 }
 
-.bottom-nav-child-fixed{
-    width: 200px;
+.nav-title {
+  position: absolute;
+  display: inline-table;
+  color: white;
+  font-size: 1em;
+  white-space:nowrap;
+  margin:5px 0;
+  height: 80%;
 }
+
+#nav-title-inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.nav-icons-wrapper {
+    display: inline-block;
+    height: 100%;
+    float: right;
+    margin-right: 10%;
+}
+
+.nav-icons {
+  height: 80%;
+  margin: 5px 5px;
+}
+
 .bottom-nav-child-flex{
-    flex-grow: 1;
+  display: inline-block;
+  width: 50px;
+  height: 100%;
+}
+
+.bottom-nav-child-flex:hover {
+  background-color: rgb(156,31,32);
 }
 

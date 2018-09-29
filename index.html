@@ -25,9 +25,6 @@
 <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon">
 <link rel="icon" href="images/favicon.jpg" type="image/x-icon">
 
-<!--Jquery 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
 <!-- gallery -->
 <link rel="stylesheet" href="assets/css/blueimp-gallery.min.css">
     
@@ -41,42 +38,51 @@
     <div class="container">
         <div id="blueimp-gallery-carousel" class="blueimp-gallery blueimp-gallery-carousel">
             <div class="slides"></div>
-            <h3 class="title"></h3>
-            <a class="prev">‹</a>
-            <a class="next">›</a>
-            <a class="play-pause"></a>
-            <ol class="indicator"></ol>
+            <a class="prev"><div class="arrow-left"></div></a>
+            <a class="next"><div class="arrow-right"></div></a>
             
             <div class="intro-wrapper">
                 <p class="intro-title"></p>
-                <p class="intro-text"></p>
+                <div class="intro-text"></div>
             </div>
         </div>
         
         <div class="bottom-nav-wrapper">
-            <img class ="bottom-nav-child-fixed" src="assets/image/ufred_logo.svg" alt="UFred Logo">
-            <p class ="bottom-nav-child-flex">Module 1: Title goes here...</p>
-            <img class ="bottom-nav-child-fixed" src="assets/image/menu_icon.svg" alt="Nav Icon">
-            <img class ="bottom-nav-child-fixed" src="assets/image/links_icon.svg" alt="Nav Link">
-            <img class ="bottom-nav-child-fixed" src="assets/image/help_icon.svg" alt="Nav Help">
+            <a class ="bottom-nav-child-fixed" href="https://www.ufred.ca/">
+                <img  class ="bottom-nav-child-fixed" src="assets/image/ufred_logo.svg" alt="UFred Logo">
+            </a>
+            <div class="nav-title">
+                <p id="nav-title-inner">Module 1: Title goes here...</p>
+            </div>
+            <div class="nav-icons-wrapper">
+                <a class="bottom-nav-child-flex" id="first-child" href="_blank">
+                    <img class ="nav-icons"  src="assets/image/menu_icon.svg" alt="Nav Icon">
+                </a>
+                <a class="bottom-nav-child-flex" href="_blank">
+                    <img class ="nav-icons"  src="assets/image/links_icon.svg" alt="Nav Link">
+                </a>
+                <a class="bottom-nav-child-flex" id="last-child" href="_blank">
+                    <img class ="nav-icons"  src="assets/image/help_icon.svg" alt="Nav Help">
+                </a>
+            </div>
         </div>
 
     </div>
     
 
-    
+    <!-- Contains Data for Each Link --> 
     <div id="links" style="display: none">
-        <a href="assets/image/bg.jpg" data-intro-title="Title goes here..." data-intro-text="Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.<br>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.<br>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.">
+        <a href="assets/image/bg.jpg" data-intro-title="Title goes here..." data-intro-text='1Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.<br>2Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.<br>3Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.<'>
             <img src="assets/image/bg.jpg" alt="Background Image 1" >
         </a>
         <a href="assets/image/bg.jpg" 
            data-intro-title="Title 2 goes here..." 
-           data-intro-text="Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.<br>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.<br>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.">>
+           data-intro-text='Bill Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.<br>Says Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.<br>Hi Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.<'>
             <img src="assets/image/bg.jpg" alt="Background Image 2">
         </a>
         <a href="assets/image/bg.jpg" 
            data-intro-title="Title 3 goes here..." 
-           data-intro-text="Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.<br>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.<br>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.">>
+           data-intro-text='HOW Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.<br>ARE Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.<br>YOU Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.<'>
             <img src="assets/image/bg.jpg" alt="Background Image 3">
         </a>
 
@@ -86,6 +92,10 @@
 
 <!--Gallery-->
 <script src="assets/js/blueimp-gallery.min.js"></script>
+
+<!--Jquery 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+-->
     
 <script>
 blueimp.Gallery(
@@ -95,26 +105,51 @@ blueimp.Gallery(
         carousel: true,
         onslide: function (index, slide) {
             
-            // I absolutely should use forEach here if I have more than, say, three elements. Copy & paste here is not the best practice but it saves time
-            var title = this.list[index].getAttribute("data-intro-title"),
+            
+            // There has to be a better way than this...
+            var title = this.list[index].getAttribute('data-intro-title'),
                 node = this.container.find('.intro-title'),
-                text = this.list[index].getAttribute("data-intro-text"),
-                nodeTwo = this.container.find('.intro-text');
+                text = this.list[index].getAttribute('data-intro-text'),
+                nodeTwo = this.container.find('.intro-text')
+                intro = document.querySelector('.intro-wrapper');
+
+            fadeOut(intro);
             
-            node.empty();
-            nodeTwo.empty();
-                          
-            if (title) {
-                node[0].appendChild(document.createTextNode(title));
-            }
-            if (text) {
-                nodeTwo[0].appendChild(document.createTextNode(text));
-            }
+            setTimeout(function(){
+                node.empty();
+                nodeTwo.empty();
+
+                if (title) {
+                    node[0].appendChild(document.createTextNode(title));
+                }
+                if (text) {
+                    
+                    let c = -1;
+                    for(let i = 0; i < text.length; i++) {
+                        c++;
+                        if (text[i] === "<") {
+                            console.log(c);
+                            console.log(i);
+                            let para = document.createElement("P");
+                            let t = document.createTextNode(text.slice(i-c, i));
+                            para.append(t);
+                            nodeTwo[0].appendChild(para);
+                            console.log(text);
+                            c = -4;
+                        }
+                    }
+     
+                    
+                }
+                fadeIn(intro);
+            }, 500);
             
-            
-        }
+        },
+        startSlideshow: false
     }
 );
+    
+
 
 </script>    
     
