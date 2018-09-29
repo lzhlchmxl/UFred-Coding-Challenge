@@ -11,12 +11,8 @@ body {
   padding-bottom: 100vh;
 }
 
-
 .container {
   position: relative;
-}
-
-.blueimp-gallery>.slides {
 }
 
 .blueimp-gallery>.slides>.slide>.slide-content {

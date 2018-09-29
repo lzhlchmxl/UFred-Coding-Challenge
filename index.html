@@ -36,6 +36,8 @@
 <body>
 
     <div class="container">
+        
+        <!-- Gallery Elements --> 
         <div id="blueimp-gallery-carousel" class="blueimp-gallery blueimp-gallery-carousel">
             <div class="slides"></div>
             <a class="prev"><div class="arrow-left"></div></a>
@@ -47,6 +49,7 @@
             </div>
         </div>
         
+        <!-- Bottom Navigation --> 
         <div class="bottom-nav-wrapper">
             <a class ="bottom-nav-child-fixed" href="https://www.ufred.ca/">
                 <img  class ="bottom-nav-child-fixed" src="assets/image/ufred_logo.svg" alt="UFred Logo">
@@ -106,46 +109,50 @@ blueimp.Gallery(
         onslide: function (index, slide) {
             
             
-            // There has to be a better way than this...
+            // There has to be a better way than this...blueimp's documentation is kind of confusing I had to manually implement the code below to achieve the wanted visual/effect for the intro text part;
             var title = this.list[index].getAttribute('data-intro-title'),
                 node = this.container.find('.intro-title'),
                 text = this.list[index].getAttribute('data-intro-text'),
                 nodeTwo = this.container.find('.intro-text')
                 intro = document.querySelector('.intro-wrapper');
 
-            fadeOut(intro);
+            fadeOut(intro); // fadeOut animation for the intro text when the gallery slides; I choose to not include JQuery if this is all I need it for;
             
+            // Callback function to set a half a second interval between animations 
             setTimeout(function(){
-                node.empty();
+                
+                // Clear the nodes after scroll
+                node.empty(); 
                 nodeTwo.empty();
 
+                // Extract title from data-* and append to the right node
                 if (title) {
                     node[0].appendChild(document.createTextNode(title));
                 }
+                
+                // Extract text from data-*, slice the text right before each <br>, append the sliced the string under a <P> tag under the right node; Scan through and repeat the process for rest of the strings;
                 if (text) {
                     
                     let c = -1;
                     for(let i = 0; i < text.length; i++) {
                         c++;
-                        if (text[i] === "<") {
-                            console.log(c);
-                            console.log(i);
+                        if (text[i] === "<") { // This is a weak implementation that may lead to bugs if, say, <strong> is used;
+                            // console.log(c);
+                            // console.log(i);
                             let para = document.createElement("P");
                             let t = document.createTextNode(text.slice(i-c, i));
                             para.append(t);
                             nodeTwo[0].appendChild(para);
-                            console.log(text);
+                            // console.log(text);
                             c = -4;
                         }
-                    }
-     
-                    
+                    }                   
                 }
-                fadeIn(intro);
+                fadeIn(intro); // Fadein the new intro once the scrolling is completed
             }, 500);
             
         },
-        startSlideshow: false
+        startSlideshow: false // Set to true if need to scroll the gallery automatically;
     }
 );
     
